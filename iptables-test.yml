@@ -1,0 +1,6 @@
+---
+- hosts: local
+  tasks:
+  - name: test iptables policy 
+#  iptables: chain=INPUT source=8.8.8.8 jump=DROP
+    iptables: policy=INPUT policy_jump=DROP
